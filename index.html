@@ -5,20 +5,52 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Movie APP</title>
+
+  <!-- Awesome Font Link -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+  <!-- CSS Style Link -->
+  <link rel="stylesheet" href="/movie_api/css/reset.css"/>
+  <link rel="stylesheet" href="/movie_api/css/style.css"/>
+  <link rel="stylesheet" href="/movie_api/css/media.css"/>
+  <link rel="stylesheet" href="/movie_api/css/search_style.css"/>
+
 </head>
 <body>
+  <header>
 
-  <div class="search-box">
-    <input type="text" / class="searchInput"><button
-      type="button"
-      class="sendBtn"
-    >
-      검색
-    </button>
+  </header>
+ 
+  <div class="searchWrap center">
+    <div class="loading">
+      <img src="/movie_api/img/loading.gif" alt="">
+    </div>
+    <div class="search-box">
+      <input type="text" placeholder="영화 제목을 입력해주세요" / class="searchInput"><button
+        type="button"
+        class="sendBtn"
+      ><i class="fa fa-search"></i>
+      </button>
+    </div>
+
+      
+
+      <div class="container clear"></div>
+      <!-- end of container -->
+
+  <div class="numContainer">
+    <div class="numBtns">
+      <button type="button" class="prev">prev</button>
+      <button type="button" class="pageNum" value="1">1</button>
+      <button type="button" class="pageNum" value="2">2</button>
+      <button type="button" class="pageNum" value="3">3</button>
+      <button type="button" class="pageNum" value="4">4</button>
+      <button type="button" class="pageNum" value="5">5</button>
+      <button type="button" class="next">next</button>
+    </div>
   </div>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script>
+</div>
+  <!-- <script>
     $(function(){
       function searchMovie(){
         var searchResult=$(".searchInput").val();
@@ -41,6 +73,10 @@
         }
       });
     });
-  </script>
+  </script> -->
 </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="/movie_api/js/recent.js"></script>
+  <script src="/movie_api/js/custom.js"></script>
+  <script src="/movie_api/js/search.js"></script>
 </html>

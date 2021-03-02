@@ -5,10 +5,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Movie APP</title>
+
+  <!-- Awesome Font Link -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+  <!-- CSS Style Link -->
+  <link rel="stylesheet" href="/movie_api/css/reset.css"/>
+  <link rel="stylesheet" href="/movie_api/css/media.css"/>
+  <link rel="stylesheet" href="/movie_api/css/search_style.css"/>
+  
 </head>
 <body>
-
-  <div class="wrap">
+  <header>
+    
+  </header>
+  
+  <div class="wrap center">
     <!-- <div class="movie_box">
       <img src="" alt="">
       <h2>제목 : </h2>
@@ -18,13 +30,15 @@
     </div> -->
   </div>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+  <!-- <script>
     $(function(){
 
       var searchValue=document.location.href.split("=")[1];
       var decodeValue=decodeURI(searchValue);
-      console.log(decodeValue);
+      //console.log(decodeValue);
 
       $.ajax({
         type:"POST",
@@ -33,7 +47,7 @@
           search_value: decodeValue,
         },
         success:function(data){
-          
+
           let obj=JSON.parse(data);
           //console.log(obj);
           //console.log(obj.items[0].title);
@@ -46,10 +60,12 @@
             //console.log(item.title);
             let itemHTML= `<div class="movie_box">
                             <img src="${item.image}" alt=""/>
-                            <h2>제목 :${item.title}</h2>
-                            <p>감독 :${item.director}</p>
-                            <p>개봉일 :${item.pubDate}</p>
-                            <p>평점 :${item.userRating}</p>
+                            <h2>${item.title}</h2>
+                            <h3>(${item.subtitle})</h3>
+                            <h4>${item.actor}</h4>
+                            <p>감독 : ${item.director}</p>
+                            <p>개봉 : ${item.pubDate}</p>
+                            <p>평점 : ${item.userRating}</p>
                           </div>`;
               itemContents.push($(itemHTML).get(0));
           });
@@ -57,6 +73,7 @@
         },
       });
     });
-  </script>
-</body>
-</html>
+  </script> -->
+  <script src="/movie_api/js/custom.js"></script>
+  <script src="/movie_api/js/search.js"></script>
+</html> 
