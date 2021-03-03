@@ -1,6 +1,7 @@
 $(function(){
 
-  let currentPage=0;
+  let currentPage=1;
+  const pageNumLength = $(".numBtns button.pageNum").length;
 
   function getData(page){
     let getDatas=[];
@@ -36,9 +37,46 @@ $(function(){
     $(".recent-movie-wrap").remove();
     $(".loading").show();
     getData(btnValue);
+
+    let btnIdx=$(this).index();
+
+    $(".numBtns button").removeClass("active");
+    $(".numBtns button").eq(btnIdx-1).addClass("active");
   });
+
+  $(".numBtns button.prev").click(function(){
+    if(currentPage==1){
+      return false;
+    } else {
+      $(".recent-movie-wrap").remove();
+      getData(currentPage-1);
+      $(".loading").show();
+      $(".numBtns button").removeClass("active");
+      $(".numBtns button").eq(currentPage).addClass("active"); 
+    }
+  });
+
+  function goToPrevNext(a,b){
+
+  }
   
-  getData(1);
+  $(".numBtns button.next").click(function(){
+
+
+    
+    if(currentPage==pageNumLength){
+      return false;
+    } else {
+      $(".recent-movie-wrap").remove();
+      getData(currentPage+1);
+      $(".loading").show();
+      $(".numBtns button").removeClass("active");
+      $(".numBtns button").eq(currentPage).addClass("active"); 
+    }
+  });
+
+
+  $("..numBtns button").eq(1).trigger("click");
 
   $(document).ajaxComplete(function(){
     $(".loading").hide();

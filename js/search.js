@@ -5,7 +5,7 @@ $(function(){
         alert("검색어를 입력해 주세요.");
         return false;
       }
-      location.href="/movie_api/search.html?key="+searchResult;
+      location.href="/movie_api/pages/search.php?key="+searchResult;
     }
 
     $(".sendBtn").click(function(){
@@ -37,7 +37,7 @@ $(function(){
     //console.log(obj.items[0].title);
       if(obj.items.length == 0){
         alert("데이터가 없습니다.");
-        location.href="/movie_api/index.html";
+        location.href="/movie_api/index.php";
       }
        let itemContents=[];
         $.each(obj.items, function(i, item){

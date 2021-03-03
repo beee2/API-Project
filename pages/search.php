@@ -30,6 +30,23 @@
     </div> -->
   </div>
 
+  <div class="container clear"></div>
+  <!-- end of container -->
+
+  <div class="numContainer">
+    <div class="numBtns">
+      <button type="button" class="pageNum first"><i class="fa fa-angle-double-left"></i></button>
+      <button type="button" class="pageNum prev"><i class="fa fa-angle-left"></i></button>
+      <button type="button" class="pageNum" value="1">1</button>
+      <button type="button" class="pageNum" value="2">2</button>
+      <button type="button" class="pageNum" value="3">3</button>
+      <button type="button" class="pageNum" value="4">4</button>
+      <button type="button" class="pageNum" value="5">5</button>
+      <button type="button" class="pageNum next"><i class="fa fa-angle-right"></i></button>
+      <button type="button" class="pageNum last"><i class="fa fa-angle-double-right"></i></button>
+    </div>
+  </div>
+  <!-- end of Number container -->
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   
@@ -74,6 +91,8 @@
       });
     });
   </script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="/movie_api/js/recent.js"></script>
   <script src="/movie_api/js/custom.js"></script>
   <script src="/movie_api/js/search.js"></script>
 </html> 
