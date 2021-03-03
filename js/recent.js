@@ -25,60 +25,58 @@ $(function(){
                             getDatas += recentHTML;
         }
         $(".container").append(getDatas);
+        $(".loading").removeClass(".hidden");
       }
     });
-    // currentPage=page;
-    //console.log(typeof(page));
   }
-  $(".numBtns button.pageNum").click(function(){
-    //let getLoad=$("/movie_api/img/loading.gif")
-    let btnValue=Number($(this).attr('value'));
-    //getLoad();
-    $(".recent-movie-wrap").remove();
-    $(".loading").show();
-    getData(btnValue);
+  $(".loading").addClass(".hidden");
+  getData();
+  // $(".numBtns button.pageNum").click(function(){
+  //   //let getLoad=$("/movie_api/img/loading.gif")
+  //   let btnValue=Number($(this).attr('value'));
+  //   //getLoad();
+  //   $(".recent-movie-wrap").remove();
+  //   $(".loading").show();
+  //   getData(btnValue);
 
-    let btnIdx=$(this).index();
+  //   let btnIdx=$(this).index();
 
-    $(".numBtns button").removeClass("active");
-    $(".numBtns button").eq(btnIdx-1).addClass("active");
-  });
+  //   $(".numBtns button").removeClass("active");
+  //   $(".numBtns button").eq(btnIdx-1).addClass("active");
+  // });
 
-  $(".numBtns button.prev").click(function(){
-    if(currentPage==1){
-      return false;
-    } else {
-      $(".recent-movie-wrap").remove();
-      getData(currentPage-1);
-      $(".loading").show();
-      $(".numBtns button").removeClass("active");
-      $(".numBtns button").eq(currentPage).addClass("active"); 
-    }
-  });
+  // $(".numBtns button.prev").click(function(){
+  //   if(currentPage==1){
+  //     return false;
+  //   } else {
+  //     $(".recent-movie-wrap").remove();
+  //     getData(currentPage-1);
+  //     $(".loading").show();
+  //     $(".numBtns button").removeClass("active");
+  //     $(".numBtns button").eq(currentPage).addClass("active"); 
+  //   }
+  // });
 
-  function goToPrevNext(a,b){
-
-  }
   
-  $(".numBtns button.next").click(function(){
+  // $(".numBtns button.next").click(function(){
 
 
-    
-    if(currentPage==pageNumLength){
-      return false;
-    } else {
-      $(".recent-movie-wrap").remove();
-      getData(currentPage+1);
-      $(".loading").show();
-      $(".numBtns button").removeClass("active");
-      $(".numBtns button").eq(currentPage).addClass("active"); 
-    }
-  });
+
+  //   if(currentPage==pageNumLength){
+  //     return false;
+  //   } else {
+  //     $(".recent-movie-wrap").remove();
+  //     getData(currentPage+1);
+  //     $(".loading").show();
+  //     $(".numBtns button").removeClass("active");
+  //     $(".numBtns button").eq(currentPage).addClass("active"); 
+  //   }
+  // });
 
 
-  $("..numBtns button").eq(1).trigger("click");
+  // $(".numBtns button").eq(1).trigger("click");
 
   $(document).ajaxComplete(function(){
-    $(".loading").hide();
+    $(".loading").addClass(".hidden");
   });
 });

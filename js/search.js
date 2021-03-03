@@ -1,6 +1,6 @@
 $(function(){
+  var searchResult=$(".searchInput").val();
     function searchMovie(){
-      var searchResult=$(".searchInput").val();
       if(!searchResult){
         alert("검색어를 입력해 주세요.");
         return false;
@@ -9,14 +9,18 @@ $(function(){
     }
 
     $(".sendBtn").click(function(){
+      $(".loading").removeClass(".hidden");
       searchMovie();
+      $(".loading").addClass(".hidden");
     });
 
     //press enter
     document.addEventListener("keydown",function(e){
       const keyCode=e.keyCode;
       if(keyCode == 13) {
+        $(".loading").removeClass(".hidden");
         searchMovie();
+        $(".loading").addClass(".hidden");
       }
     });
 

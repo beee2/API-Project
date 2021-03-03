@@ -1,17 +1,19 @@
 /* search result page style */
-.container{width: 100%; height: auto; margin: auto; max-width: 980px;}
-.numContainer{width: 100%; height: auto; margin: auto; max-width: 980px;}
+.headerSearch{width:100%; height:105px; position:fixed; top:0; left:0; background:rgba(0, 0, 0, 0.5); z-index:99; transition:all 0.4s;}
+
+/* .numContainer{width: 100%; height: auto; margin: auto; max-width: 980px;} */
 
 
-
+/* 
 .recent-movie-wrap{float: left; width: 20%; padding: 10px;}
 .recent-movie-wrap img{width: 100%;}
-.recent-movie-wrap h3{font-size:12px; white-space: nowrap; text-overflow: ellipsis; width: 100%; overflow: hidden;}
+.recent-movie-wrap h3{font-size:12px; white-space: nowrap; text-overflow: ellipsis; width: 100%; overflow: hidden;} */
 
-
+/* when loading result */
+.loading{width: 200px; height: 200px;}
 .loading img{width: 100%; height: 100%;}
 
-header{width:100%; height:105px; position:fixed; top:0; left:0; background:rgba(0, 0, 0, 0.5); z-index:99; transition:all 0.4s;}
+
 /* header{width: 100%; height: 120px; background: #ddd; border: 1px solid #000; position: relative;} */
 /* changed header style when scroll down */
 

@@ -16,46 +16,40 @@
 
 </head>
 <body>
-  <header>
 
-  </header>
+<div class="indexWrap">
+  <header class="header center"></header>
  
   <div class="searchWrap center">
-    <div class="loading">
+    <div class="loading hidden">
       <img src="/movie_api/img/loading.gif" alt="">
     </div>
     <div class="search-box">
       <input type="text" placeholder="영화 제목을 입력해주세요" class="searchInput"><button type="button" class="sendBtn"><i class="fa fa-search"></i></button>
     </div>
+  </div>
+  <!-- end of searchWrap -->
 
-      
 
-  
+  <div class="container clear"></div>
+  <!-- end of container -->
+
+  <div class="numContainer">
+    <div class="numBtns">
+      <button type="button" class="pageNum first"><i class="fa fa-angle-double-left"></i></button>
+      <button type="button" class="pageNum prev"><i class="fa fa-angle-left"></i></button>
+      <button type="button" class="pageNum" value="1">1</button>
+      <button type="button" class="pageNum" value="2">2</button>
+      <button type="button" class="pageNum" value="3">3</button>
+      <button type="button" class="pageNum" value="4">4</button>
+      <button type="button" class="pageNum" value="5">5</button>
+      <button type="button" class="pageNum next"><i class="fa fa-angle-right"></i></button>
+      <button type="button" class="pageNum last"><i class="fa fa-angle-double-right"></i></button>
+    </div>
+  </div>
+  <!-- end of Number container -->
 </div>
-  <!-- <script>
-    $(function(){
-      function searchMovie(){
-        var searchResult=$(".searchInput").val();
-        if(!searchResult){
-          alert("검색어를 입력해 주세요.");
-          return false;
-        }
-        location.href="/movie_api/search.html?key="+searchResult;
-      }
-
-      $(".sendBtn").click(function(){
-        searchMovie();
-      });
-
-      //press enter
-      document.addEventListener("keydown",function(e){
-        const keyCode=e.keyCode;
-        if(keyCode == 13) {
-          searchMovie();
-        }
-      });
-    });
-  </script> -->
+<!-- end of indexWrap -->
 </body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="/movie_api/js/recent.js"></script>

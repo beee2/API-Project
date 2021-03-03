@@ -1,10 +1,26 @@
 /* index page style */
-/* header{width: 15%; height: 100vh; position: fixed; margin-left: 5%; margin-right: 65%; background: #ddd; display:none;} */
+.header{width: 15%; height: 100vh; top:0; position: fixed; margin-left: 18%; background:rgba(0, 0, 0, 0.5); z-index:99; }
 
-.searchWrap{width: 100%; height: auto; position: relative;}
-.searchWrap .search-box{width: 100%; height: auto; position: relative;}
-.searchWrap .search-box .searchInput{width: 40%; height: 35px; border: none; margin: 0; align-items: center; justify-content: center; margin-left: 28%; margin-top: 35%; color: #000; padding-left: 10px;}
+/* search-box style */
+.searchWrap{width: 100%; height: auto; position: relative; }
+.searchWrap .search-box{width: 100%; height: auto; margin-left: 85%; margin-top: 10%; _position: absolute; }
+.searchWrap .search-box .searchInput{width: 30%; height: 35px; border: none; margin: 0; align-items: center; justify-content: center; color: #000; padding-left: 10px;}
 .searchWrap .search-box input::placeholder{color: #bbb;}
-.searchWrap .search-box .sendBtn{width: 35px; height: 35px; font-size: 25px; border:none; background: #fff;}
-.searchWrap .search-box .sendBtn:hover{cursor: pointer;}
+.searchWrap .search-box .sendBtn{width: 35px; height: 35px; font-size: 25px; border:none; background: #fff; transition: all 0.4s; position: absolute;}
+.searchWrap .search-box .sendBtn:hover{cursor: pointer; color: #aaa;}
 
+
+/* recent movie list style */         
+.container{width: 100%; height: auto; margin: auto; max-width: 960px;  margin-top: 1%; margin-left: 35%;}
+.recent-movie-wrap{float: left; width: 20%; padding: 10px; position: relative;}
+.recent-movie-wrap img{width: 100%;}
+.recent-movie-wrap h3{font-size:12px; white-space: nowrap; text-overflow: ellipsis; width: 100%; overflow: hidden; padding-top: 10px;}
+
+/* numBtns style */
+.numContainer{width: 100%; height: auto; margin: auto; margin-left: 53%; margin-top: 3%; max-width: 960px; position: absolute;}
+.numContainer .pageNum{width: 25px; height: 25px; background: indianred; color: #fff; border: none; transition: all 0.2s;}
+.numContainer .pageNum:hover{background:#fff; color: indianred; cursor: pointer;}
+
+/* when loading result */
+.loading{width: 200px; height: 200px;}
+.loading img{width: 100%; height: 100%;}
